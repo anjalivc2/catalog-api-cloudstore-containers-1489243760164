@@ -1,7 +1,7 @@
 #Use the IBM Node image as a base image
 FROM registry.ng.bluemix.net/ibmnode:latest
 
-#Expose the port for your Personal Insights app, and set 
+#Expose the port for your Catalog Microservice app, and set 
 #it as an environment variable as expected by cf apps
 ENV PORT=3000
 EXPOSE 3000
@@ -17,5 +17,5 @@ RUN npm install
 #IBM Containers networking is finished before the app starts. 
 CMD (sleep 60; npm start)
 
-#Start the Personal Insight app. 
+#Start the Catalog Service
 CMD ["node", "app.js"]
