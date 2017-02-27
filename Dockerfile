@@ -7,8 +7,7 @@ ENV PORT=3000
 EXPOSE 3000
 ENV NODE_ENV production
 
-RUN git clone https://github.com/interconnect2017/Microservices-Catalog-Container
-WORKDIR Microservices-Catalog-Container
+COPY * ./
 
 #Install any necessary requirements from package.json
 RUN npm install
